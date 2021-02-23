@@ -32,9 +32,9 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: ./
-          file: ./Dockerfile-py3-win64
+          file: ./Dockerfile-py3-win32
           push: true
-          tags: willyjl/pyinstaller-windows:latest
+          tags: willyjl/pyinstaller-windows:win32
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
